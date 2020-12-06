@@ -40,12 +40,12 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.botonInicio = new System.Windows.Forms.PictureBox();
             this.PanelTitulo = new System.Windows.Forms.Panel();
-            this.iconoHijoform1 = new FontAwesome.Sharp.IconPictureBox();
             this.lblInicio = new System.Windows.Forms.Label();
+            this.iconoHijoform1 = new FontAwesome.Sharp.IconPictureBox();
             this.panelEscritorio = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.label1 = new System.Windows.Forms.Label();
             this.panelmenu.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.botonInicio)).BeginInit();
@@ -80,7 +80,7 @@
             this.panelmenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelmenu.Location = new System.Drawing.Point(0, 0);
             this.panelmenu.Name = "panelmenu";
-            this.panelmenu.Size = new System.Drawing.Size(220, 587);
+            this.panelmenu.Size = new System.Drawing.Size(220, 415);
             this.panelmenu.TabIndex = 3;
             // 
             // iconbtndatospersona
@@ -125,7 +125,7 @@
             this.iconButton2.FlatAppearance.BorderSize = 0;
             this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton2.ForeColor = System.Drawing.Color.Gainsboro;
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.PhotoVideo;
+            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.ThumbsUp;
             this.iconButton2.IconColor = System.Drawing.Color.Gainsboro;
             this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -133,10 +133,11 @@
             this.iconButton2.Name = "iconButton2";
             this.iconButton2.Size = new System.Drawing.Size(220, 60);
             this.iconButton2.TabIndex = 2;
-            this.iconButton2.Text = "Datos de Pelicula\r\n";
+            this.iconButton2.Text = "Datos de Alquiler";
             this.iconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton2.UseVisualStyleBackColor = true;
+            this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
             // 
             // iconbtnDatosPelicula
             // 
@@ -188,6 +189,16 @@
             this.PanelTitulo.Size = new System.Drawing.Size(724, 80);
             this.PanelTitulo.TabIndex = 6;
             // 
+            // lblInicio
+            // 
+            this.lblInicio.AutoSize = true;
+            this.lblInicio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.lblInicio.Location = new System.Drawing.Point(65, 38);
+            this.lblInicio.Name = "lblInicio";
+            this.lblInicio.Size = new System.Drawing.Size(32, 13);
+            this.lblInicio.TabIndex = 1;
+            this.lblInicio.Text = "Inicio";
+            // 
             // iconoHijoform1
             // 
             this.iconoHijoform1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -201,16 +212,6 @@
             this.iconoHijoform1.TabIndex = 0;
             this.iconoHijoform1.TabStop = false;
             // 
-            // lblInicio
-            // 
-            this.lblInicio.AutoSize = true;
-            this.lblInicio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.lblInicio.Location = new System.Drawing.Point(65, 38);
-            this.lblInicio.Name = "lblInicio";
-            this.lblInicio.Size = new System.Drawing.Size(32, 13);
-            this.lblInicio.TabIndex = 1;
-            this.lblInicio.Text = "Inicio";
-            // 
             // panelEscritorio
             // 
             this.panelEscritorio.BackColor = System.Drawing.Color.Navy;
@@ -219,13 +220,25 @@
             this.panelEscritorio.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelEscritorio.Location = new System.Drawing.Point(220, 80);
             this.panelEscritorio.Name = "panelEscritorio";
-            this.panelEscritorio.Size = new System.Drawing.Size(724, 507);
+            this.panelEscritorio.Size = new System.Drawing.Size(724, 335);
             this.panelEscritorio.TabIndex = 7;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.label1.Location = new System.Drawing.Point(204, 238);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(106, 37);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "label1";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(189, 127);
+            this.pictureBox1.Location = new System.Drawing.Point(179, 37);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(344, 186);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -237,27 +250,18 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(323, 347);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "label1";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            // 
             // TIENDA_ALQUILER_BIENVENIDO
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(944, 587);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.ClientSize = new System.Drawing.Size(944, 415);
             this.Controls.Add(this.panelEscritorio);
             this.Controls.Add(this.PanelTitulo);
             this.Controls.Add(this.panelmenu);
             this.Controls.Add(this.btnDatosPersonales);
             this.Controls.Add(this.btnDatoPeli);
+            this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Name = "TIENDA_ALQUILER_BIENVENIDO";
             this.Text = "TIENDA_ALQUILER_BIENVENIDO";
             this.panelmenu.ResumeLayout(false);

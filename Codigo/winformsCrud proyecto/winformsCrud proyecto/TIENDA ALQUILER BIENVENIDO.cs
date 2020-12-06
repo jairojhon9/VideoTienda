@@ -125,5 +125,11 @@ namespace winformsCrud_proyecto
         {
             label1.Text = DateTime.Now.ToString();
         }
+
+        private void iconButton2_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, BRGColors.color3);
+            OpenFormchildren(new FrmAlquiler());
+        }
     }
 }

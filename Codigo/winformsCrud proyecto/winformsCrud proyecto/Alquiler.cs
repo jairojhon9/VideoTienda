@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace winformsCrud_proyecto
 {
-    public partial class Alquiler : Form
+    public partial class FrmAlquiler : Form
     {
-        public Alquiler()
+        public FrmAlquiler()
         {
             InitializeComponent();
         }
